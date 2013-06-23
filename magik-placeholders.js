@@ -1,6 +1,7 @@
 ﻿/**
  * Displays placeholder texts, also removes the placeholder upon focus and puts
- * the placeholder back in upon blur (if nothing was changed). 
+ * the placeholder back upon blur (if nothing was changed).
+ *  
  * @example
  * // initialize the placeholders, selector is optional
  * Magik.Placeholders.init(selector);
@@ -149,14 +150,14 @@ Magik.Placeholders = (function(){
                   /**
                    * @function upon focus clear the placeholder text
                    */
-                  $this.bind('focus', function(e){
+                  $this.on('focus', function(e){
                       removePlaceholder($(this));
                   });
                 
                   /**
                    * @function upon focus clear the placeholder text
                    */
-                  $this.bind('change', function(e){
+                  $this.on('change', function(e){
                       changePlaceholder($(this));
                   });
                 
@@ -164,7 +165,7 @@ Magik.Placeholders = (function(){
                    * @function upon blur put the placeholder text back in if no  
                    * input was supplied
                    */
-                  $this.bind('blur', function(e){
+                  $this.on('blur', function(e){
                       setPlaceholder($(this));
                   });
               }
